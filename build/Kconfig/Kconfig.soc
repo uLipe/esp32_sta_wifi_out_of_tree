@@ -1,0 +1,1 @@
+osource "/home/ulipe/espressif_work/zephyr/soc/$(ARCH)/*/Kconfig.soc"

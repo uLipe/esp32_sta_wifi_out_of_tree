@@ -1,0 +1,42 @@
+menu "hal_nordic (/home/ulipe/espressif_work/modules/hal/nordic)"
+osource "$(ZEPHYR_HAL_NORDIC_KCONFIG)"
+config ZEPHYR_HAL_NORDIC_MODULE
+	bool
+	default y
+endmenu
+menu "mbedtls (/home/ulipe/espressif_work/modules/crypto/mbedtls)"
+osource "$(ZEPHYR_MBEDTLS_KCONFIG)"
+config ZEPHYR_MBEDTLS_MODULE
+	bool
+	default y
+endmenu
+menu "sof (/home/ulipe/espressif_work/modules/audio/sof)"
+osource "/home/ulipe/espressif_work/modules/audio/sof/zephyr/Kconfig"
+config ZEPHYR_SOF_MODULE
+	bool
+	default y
+endmenu
+menu "TraceRecorder (/home/ulipe/espressif_work/modules/debug/TraceRecorder)"
+osource "/home/ulipe/espressif_work/modules/debug/TraceRecorder/kernelports/Zephyr/Kconfig"
+config ZEPHYR_TRACERECORDER_MODULE
+	bool
+	default y
+endmenu
+menu "trusted-firmware-m (/home/ulipe/espressif_work/modules/tee/tfm)"
+osource "$(ZEPHYR_TRUSTED_FIRMWARE_M_KCONFIG)"
+config ZEPHYR_TRUSTED_FIRMWARE_M_MODULE
+	bool
+	default y
+endmenu
+menu "nanopb (/home/ulipe/espressif_work/modules/lib/nanopb)"
+osource "$(ZEPHYR_NANOPB_KCONFIG)"
+config ZEPHYR_NANOPB_MODULE
+	bool
+	default y
+endmenu
+menu "tensorflow (/home/ulipe/espressif_work/modules/lib/tensorflow)"
+osource "$(ZEPHYR_TENSORFLOW_KCONFIG)"
+config ZEPHYR_TENSORFLOW_MODULE
+	bool
+	default y
+endmenu

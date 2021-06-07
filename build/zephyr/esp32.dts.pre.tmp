@@ -1,0 +1,285 @@
+/dts-v1/;
+/ {
+ #address-cells = <1>;
+ #size-cells = <1>;
+ chosen { };
+ aliases { };
+};
+/ {
+ soc {
+  #address-cells = <1>;
+  #size-cells = <1>;
+  compatible = "simple-bus";
+  ranges;
+ };
+};
+/ {
+ chosen {
+  zephyr,entropy = &trng0;
+  zephyr,flash-controller = &flash;
+ };
+ cpus {
+  #address-cells = <1>;
+  #size-cells = <0>;
+  cpu0: cpu@0 {
+   device_type = "cpu";
+   compatible = "cadence,tensilica-xtensa-lx6";
+   reg = <0>;
+   clock-source = <1U>;
+  };
+  cpu1: cpu@1 {
+   device_type = "cpu";
+   compatible = "cadence,tensilica-xtensa-lx6";
+   reg = <1>;
+   clock-source = <1U>;
+  };
+ };
+ wifi: wifi {
+  compatible = "espressif,esp32-wifi";
+  status = "disabled";
+ };
+ soc {
+  sram0: memory@3ffb0000 {
+   compatible = "mmio-sram";
+   reg = <0x3FFB0000 0x50000>;
+  };
+  rtc: rtc@3ff48000 {
+   compatible = "espressif,esp32-rtc";
+   reg = <0x3ff48000 0x0D8>;
+   label = "RTC";
+   xtal-freq = <0U>;
+   xtal-div = <0>;
+   #clock-cells = <1>;
+   status = "ok";
+  };
+  flash: flash-controller@3ff42000 {
+   compatible = "espressif,esp32-flash-controller";
+   label = "FLASH_CTRL";
+   reg = <0x3ff42000 0x1000>;
+   #address-cells = <1>;
+   #size-cells = <1>;
+   flash0: flash@0 {
+    compatible = "soc-nv-flash";
+    label = "FLASH_ESP32";
+    reg = <0 0x400000>;
+    erase-block-size = <4096>;
+    write-block-size = <1>;
+   };
+  };
+  uart0: uart@3ff40000 {
+   compatible = "espressif,esp32-uart";
+   reg = <0x3ff40000 0x400>;
+   label = "UART_0";
+   clocks = <&rtc 2>;
+   status = "disabled";
+  };
+  uart1: uart@3ff50000 {
+   compatible = "espressif,esp32-uart";
+   reg = <0x3ff50000 0x400>;
+   label = "UART_1";
+   clocks = <&rtc 5>;
+   status = "disabled";
+  };
+  uart2: uart@3ff6e000 {
+   compatible = "espressif,esp32-uart";
+   reg = <0x3ff6E000 0x400>;
+   label = "UART_2";
+   clocks = <&rtc 23>;
+   status = "disabled";
+  };
+  pinmux: pinmux@3ff49000 {
+   compatible = "espressif,esp32-pinmux";
+   reg = <0x3ff49000 0x94>;
+  };
+  gpio0: gpio@3ff44000 {
+   compatible = "espressif,esp32-gpio";
+   gpio-controller;
+   #gpio-cells = <2>;
+   reg = <0x3ff44000 0x800>;
+   label = "GPIO_0";
+   ngpios = <32>;
+  };
+  gpio1: gpio@3ff44800 {
+   compatible = "espressif,esp32-gpio";
+   gpio-controller;
+   #gpio-cells = <2>;
+   reg = <0x3ff44800 0x800>;
+   label = "GPIO_1";
+   ngpios = <8>;
+  };
+  i2c0: i2c@3ff53000 {
+   compatible = "espressif,esp32-i2c";
+   #address-cells = <1>;
+   #size-cells = <0>;
+   reg = <0x3ff53000 0x1000>;
+   label = "I2C_0";
+   clocks = <&rtc 7>;
+   status = "disabled";
+  };
+  i2c1: i2c@3ff67000 {
+   compatible = "espressif,esp32-i2c";
+   #address-cells = <1>;
+   #size-cells = <0>;
+   reg = <0x3ff67000 0x1000>;
+   label = "I2C_1";
+   clocks = <&rtc 18>;
+   status = "disabled";
+  };
+  trng0: trng@3ff75144 {
+   compatible = "espressif,esp32-trng";
+   reg = <0x3FF75144 0x4>;
+   label = "TRNG_0";
+   status = "disabled";
+  };
+  wdt0: watchdog@3ff5f048 {
+   compatible = "espressif,esp32-watchdog";
+   reg = <0x3ff5f048 0x20>;
+   label = "WDT_0";
+   status = "okay";
+  };
+  wdt1: watchdog@3ff60048 {
+   compatible = "espressif,esp32-watchdog";
+   reg = <0x3ff60048 0x20>;
+   label = "WDT_1";
+   status = "disabled";
+  };
+  spi2: spi@3ff64000 {
+   compatible = "espressif,esp32-spi";
+   reg = <0x3ff64000 ((4) * 1024)>;
+   label = "SPI_2";
+   clocks = <&rtc 6>;
+   status = "disabled";
+  };
+  spi3: spi@3ff65000 {
+   compatible = "espressif,esp32-spi";
+   reg = <0x3ff65000 ((4) * 1024)>;
+   label = "SPI_3";
+   clocks = <&rtc 16>;
+   status = "disabled";
+  };
+  timer0: counter@3ff5f000 {
+   compatible = "espressif,esp32-timer";
+   reg = <0x3ff5f000 ((4) * 1024)>;
+   label = "TIMG0_T0";
+   status = "disabled";
+  };
+  timer1: counter@3ff5f024 {
+   compatible = "espressif,esp32-timer";
+   reg = <0x3ff5f024 ((4) * 1024)>;
+   label = "TIMG0_T1";
+   status = "disabled";
+  };
+  timer2: counter@3ff60000 {
+   compatible = "espressif,esp32-timer";
+   reg = <0x3ff60000 ((4) * 1024)>;
+   label = "TIMG1_T0";
+   status = "disabled";
+  };
+  timer3: counter@3ff60024 {
+   compatible = "espressif,esp32-timer";
+   reg = <0x3ff60024 ((4) * 1024)>;
+   label = "TIMG1_T1";
+   status = "disabled";
+  };
+ };
+};
+/ {
+ model = "esp32";
+ compatible = "espressif,esp32";
+ aliases {
+  uart-0 = &uart0;
+  i2c-0 = &i2c0;
+ };
+ chosen {
+  zephyr,sram = &sram0;
+  zephyr,console = &uart0;
+  zephyr,shell-uart = &uart0;
+  zephyr,flash = &flash0;
+ };
+};
+&cpu0 {
+ clock-frequency = <240U>;
+};
+&cpu1 {
+ clock-frequency = <240U>;
+};
+&uart0 {
+ status = "okay";
+ current-speed = <115200>;
+ tx-pin = <1>;
+ rx-pin = <3>;
+ rts-pin = <22>;
+ cts-pin = <19>;
+};
+&uart1 {
+ current-speed = <115200>;
+ tx-pin = <10>;
+ rx-pin = <9>;
+ rts-pin = <11>;
+ cts-pin = <6>;
+ hw-flow-control;
+};
+&uart2 {
+ current-speed = <115200>;
+ tx-pin = <17>;
+ rx-pin = <16>;
+ rts-pin = <7>;
+ cts-pin = <8>;
+ hw-flow-control;
+};
+&i2c0 {
+ status = "okay";
+ clock-frequency = <400000>;
+ sda-pin = <21>;
+ scl-pin = <22>;
+};
+&i2c1 {
+ clock-frequency = <400000>;
+ sda-pin = <18>;
+ scl-pin = <5>;
+};
+&spi2 {
+ #address-cells = <1>;
+ #size-cells = <0>;
+ status = "okay";
+ miso-pin = <12>;
+ mosi-pin = <13>;
+ sclk-pin = <14>;
+ csel-pin = <15>;
+};
+&spi3 {
+ #address-cells = <1>;
+ #size-cells = <0>;
+ status = "okay";
+ miso-pin = <19>;
+ mosi-pin = <23>;
+ sclk-pin = <18>;
+ csel-pin = <5>;
+};
+&timer0 {
+ status = "okay";
+};
+&timer1 {
+ status = "okay";
+};
+&timer2 {
+ status = "okay";
+};
+&timer3 {
+ status = "okay";
+};
+&trng0 {
+ status = "okay";
+};
+&flash0 {
+ status = "okay";
+ partitions {
+  compatible = "fixed-partitions";
+  #address-cells = <1>;
+  #size-cells = <1>;
+  storage_partition: partition@9000 {
+   label = "storage";
+   reg = <0x00009000 0x00006000>;
+  };
+ };
+};

@@ -1,0 +1,3 @@
+source "/home/ulipe/espressif_work/modules/hal/espressif/components/bootloader/Kconfig.projbuild"
+source "/home/ulipe/espressif_work/modules/hal/espressif/components/esptool_py/Kconfig.projbuild"
+source "/home/ulipe/espressif_work/modules/hal/espressif/components/partition_table/Kconfig.projbuild"

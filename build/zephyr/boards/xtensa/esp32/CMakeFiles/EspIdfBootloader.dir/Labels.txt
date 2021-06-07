@@ -1,0 +1,13 @@
+# Target labels
+ EspIdfBootloader
+# Source files and their labels
+/home/ulipe/espressif_work/esp32_sta_wifi_out_of_tree/build/zephyr/boards/xtensa/esp32/CMakeFiles/EspIdfBootloader
+/home/ulipe/espressif_work/esp32_sta_wifi_out_of_tree/build/zephyr/boards/xtensa/esp32/CMakeFiles/EspIdfBootloader.rule
+/home/ulipe/espressif_work/esp32_sta_wifi_out_of_tree/build/zephyr/boards/xtensa/esp32/CMakeFiles/EspIdfBootloader-complete.rule
+/home/ulipe/espressif_work/esp32_sta_wifi_out_of_tree/build/esp-idf/src/EspIdfBootloader-stamp/EspIdfBootloader-install.rule
+/home/ulipe/espressif_work/esp32_sta_wifi_out_of_tree/build/esp-idf/src/EspIdfBootloader-stamp/EspIdfBootloader-mkdir.rule
+/home/ulipe/espressif_work/esp32_sta_wifi_out_of_tree/build/esp-idf/src/EspIdfBootloader-stamp/EspIdfBootloader-download.rule
+/home/ulipe/espressif_work/esp32_sta_wifi_out_of_tree/build/esp-idf/src/EspIdfBootloader-stamp/EspIdfBootloader-update.rule
+/home/ulipe/espressif_work/esp32_sta_wifi_out_of_tree/build/esp-idf/src/EspIdfBootloader-stamp/EspIdfBootloader-patch.rule
+/home/ulipe/espressif_work/esp32_sta_wifi_out_of_tree/build/esp-idf/src/EspIdfBootloader-stamp/EspIdfBootloader-configure.rule
+/home/ulipe/espressif_work/esp32_sta_wifi_out_of_tree/build/esp-idf/src/EspIdfBootloader-stamp/EspIdfBootloader-build.rule

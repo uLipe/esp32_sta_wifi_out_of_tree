@@ -1,0 +1,43 @@
+{
+	"sources" : 
+	[
+		{
+			"file" : "/home/ulipe/espressif_work/esp32_sta_wifi_out_of_tree/build/zephyr/boards/xtensa/esp32/CMakeFiles/EspIdfBootloader"
+		},
+		{
+			"file" : "/home/ulipe/espressif_work/esp32_sta_wifi_out_of_tree/build/zephyr/boards/xtensa/esp32/CMakeFiles/EspIdfBootloader.rule"
+		},
+		{
+			"file" : "/home/ulipe/espressif_work/esp32_sta_wifi_out_of_tree/build/zephyr/boards/xtensa/esp32/CMakeFiles/EspIdfBootloader-complete.rule"
+		},
+		{
+			"file" : "/home/ulipe/espressif_work/esp32_sta_wifi_out_of_tree/build/esp-idf/src/EspIdfBootloader-stamp/EspIdfBootloader-install.rule"
+		},
+		{
+			"file" : "/home/ulipe/espressif_work/esp32_sta_wifi_out_of_tree/build/esp-idf/src/EspIdfBootloader-stamp/EspIdfBootloader-mkdir.rule"
+		},
+		{
+			"file" : "/home/ulipe/espressif_work/esp32_sta_wifi_out_of_tree/build/esp-idf/src/EspIdfBootloader-stamp/EspIdfBootloader-download.rule"
+		},
+		{
+			"file" : "/home/ulipe/espressif_work/esp32_sta_wifi_out_of_tree/build/esp-idf/src/EspIdfBootloader-stamp/EspIdfBootloader-update.rule"
+		},
+		{
+			"file" : "/home/ulipe/espressif_work/esp32_sta_wifi_out_of_tree/build/esp-idf/src/EspIdfBootloader-stamp/EspIdfBootloader-patch.rule"
+		},
+		{
+			"file" : "/home/ulipe/espressif_work/esp32_sta_wifi_out_of_tree/build/esp-idf/src/EspIdfBootloader-stamp/EspIdfBootloader-configure.rule"
+		},
+		{
+			"file" : "/home/ulipe/espressif_work/esp32_sta_wifi_out_of_tree/build/esp-idf/src/EspIdfBootloader-stamp/EspIdfBootloader-build.rule"
+		}
+	],
+	"target" : 
+	{
+		"labels" : 
+		[
+			"EspIdfBootloader"
+		],
+		"name" : "EspIdfBootloader"
+	}
+}

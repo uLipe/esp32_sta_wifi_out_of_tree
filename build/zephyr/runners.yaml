@@ -1,0 +1,33 @@
+# Available runners configured by board.cmake.
+runners:
+- esp32
+- esp32
+- esp32
+
+# Default flash runner if --runner is not given.
+flash-runner: esp32
+
+# Common runner configuration values.
+config:
+  board_dir: /home/ulipe/espressif_work/zephyr/boards/xtensa/esp32
+  # Build outputs:
+  elf_file: zephyr.elf
+  bin_file: zephyr.bin
+  # Host tools:
+  gdb: /home/ulipe/.espressif/tools/xtensa-esp32-elf/esp-2020r2-8.2.0/xtensa-esp32-elf/bin/xtensa-esp32-elf-gdb
+  openocd: /usr/local/bin/openocd
+
+# Runner specific arguments
+args:
+  esp32:
+    - --esp-idf-path=/home/ulipe/espressif_work/modules/hal/espressif
+    - --esp-flash-bootloader=/home/ulipe/espressif_work/esp32_sta_wifi_out_of_tree/build/esp-idf/build/bootloader/bootloader.bin
+    - --esp-flash-partition_table=/home/ulipe/espressif_work/esp32_sta_wifi_out_of_tree/build/esp-idf/build/partitions_singleapp.bin
+  esp32:
+    - --esp-idf-path=/home/ulipe/espressif_work/modules/hal/espressif
+    - --esp-flash-bootloader=/home/ulipe/espressif_work/esp32_sta_wifi_out_of_tree/build/esp-idf/build/bootloader/bootloader.bin
+    - --esp-flash-partition_table=/home/ulipe/espressif_work/esp32_sta_wifi_out_of_tree/build/esp-idf/build/partitions_singleapp.bin
+  esp32:
+    - --esp-idf-path=/home/ulipe/espressif_work/modules/hal/espressif
+    - --esp-flash-bootloader=/home/ulipe/espressif_work/esp32_sta_wifi_out_of_tree/build/esp-idf/build/bootloader/bootloader.bin
+    - --esp-flash-partition_table=/home/ulipe/espressif_work/esp32_sta_wifi_out_of_tree/build/esp-idf/build/partitions_singleapp.bin

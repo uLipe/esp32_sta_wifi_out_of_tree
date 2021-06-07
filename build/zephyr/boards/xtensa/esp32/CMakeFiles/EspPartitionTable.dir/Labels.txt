@@ -1,0 +1,13 @@
+# Target labels
+ EspPartitionTable
+# Source files and their labels
+/home/ulipe/espressif_work/esp32_sta_wifi_out_of_tree/build/zephyr/boards/xtensa/esp32/CMakeFiles/EspPartitionTable
+/home/ulipe/espressif_work/esp32_sta_wifi_out_of_tree/build/zephyr/boards/xtensa/esp32/CMakeFiles/EspPartitionTable.rule
+/home/ulipe/espressif_work/esp32_sta_wifi_out_of_tree/build/zephyr/boards/xtensa/esp32/CMakeFiles/EspPartitionTable-complete.rule
+/home/ulipe/espressif_work/esp32_sta_wifi_out_of_tree/build/zephyr/boards/xtensa/esp32/EspPartitionTable-prefix/src/EspPartitionTable-stamp/EspPartitionTable-install.rule
+/home/ulipe/espressif_work/esp32_sta_wifi_out_of_tree/build/zephyr/boards/xtensa/esp32/EspPartitionTable-prefix/src/EspPartitionTable-stamp/EspPartitionTable-mkdir.rule
+/home/ulipe/espressif_work/esp32_sta_wifi_out_of_tree/build/zephyr/boards/xtensa/esp32/EspPartitionTable-prefix/src/EspPartitionTable-stamp/EspPartitionTable-download.rule
+/home/ulipe/espressif_work/esp32_sta_wifi_out_of_tree/build/zephyr/boards/xtensa/esp32/EspPartitionTable-prefix/src/EspPartitionTable-stamp/EspPartitionTable-update.rule
+/home/ulipe/espressif_work/esp32_sta_wifi_out_of_tree/build/zephyr/boards/xtensa/esp32/EspPartitionTable-prefix/src/EspPartitionTable-stamp/EspPartitionTable-patch.rule
+/home/ulipe/espressif_work/esp32_sta_wifi_out_of_tree/build/zephyr/boards/xtensa/esp32/EspPartitionTable-prefix/src/EspPartitionTable-stamp/EspPartitionTable-configure.rule
+/home/ulipe/espressif_work/esp32_sta_wifi_out_of_tree/build/zephyr/boards/xtensa/esp32/EspPartitionTable-prefix/src/EspPartitionTable-stamp/EspPartitionTable-build.rule

@@ -1,0 +1,5 @@
+source "/home/ulipe/espressif_work/modules/hal/espressif/components/efuse/Kconfig"
+source "/home/ulipe/espressif_work/modules/hal/espressif/components/esp32/Kconfig"
+source "/home/ulipe/espressif_work/modules/hal/espressif/components/esp_common/Kconfig"
+source "/home/ulipe/espressif_work/modules/hal/espressif/components/log/Kconfig"
+source "/home/ulipe/espressif_work/modules/hal/espressif/components/spi_flash/Kconfig"
